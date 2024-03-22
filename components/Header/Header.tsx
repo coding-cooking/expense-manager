@@ -3,7 +3,7 @@
 import styles from './Header.module.css'
 import Logo from '../../public/logo.svg'
 import Image from 'next/image'
-import { Group, Text } from '@mantine/core'
+import { Group, Button } from '@mantine/core'
 import Link from 'next/link'
 
 export default function Header() {
@@ -14,7 +14,8 @@ export default function Header() {
                 <Image src={Logo} alt='' width={40} height={40} />
             </Link>
             <Link href={loginUrl} className={styles.login}>
-                <Text fw={500} size='lg'>log in</Text>
+                <Button size='sm' variant="gradient"
+                    gradient={{ from: 'blue', to: 'cyan', deg: 90 }}>log in</Button>
                 {/* if log in, show 'log out' */}
                 {/* <Text fw={500} size='lg'>log out</Text> */}
             </Link>
